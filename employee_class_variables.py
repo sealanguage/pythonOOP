@@ -25,5 +25,7 @@ emp_2 = Employee("test", "user", 85000)
 print(emp_1.email)
 print(emp_2.email)
 
-# print("{} {}".format(emp_1.first, emp_1.last))  //  changed to put in method above
+# print("{} {}".format(emp_1.first, emp_1.last))  //  changed to put in method above and still works in print statement below
 print(emp_1.fullname())
+#  this also works to print the employee name
+print(Employee.fullname(emp_1))
