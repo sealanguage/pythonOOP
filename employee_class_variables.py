@@ -14,6 +14,8 @@ class Employee:
         self.email = first + "." + last + "@company.com"
 
     def fullname(self):
+        #  using self.raise_amount allows us to change the raise_amount for a single instance
+        #  using self allows a sub class to override this variable
         return "{} {}".format(self.first, self.last)
 
     def apply_raise(self):
@@ -27,6 +29,21 @@ emp_2 = Employee("test", "user", 85000)
 
 
 print(Employee.raise_amount)
+
+#  prints {'pay': 75000, 'last': 'Schafer', 'email': 'Corey.Schafer@company.com', 'first': 'Corey'}  no raise_amount in the dict
+# print(emp_1.__dict__)
+
+#  changes raise amount as class variable
+Employee.raise_amount = 1.05
+
+# changes raise_amount for just the instance
+emp_1.raise_amount = 1.08
+
+
+#  prints out  {'pay': 75000, 'last': 'Schafer', 'email': 'Corey.Schafer@company.com', 'first': 'Corey'}  {'__module__': '__main__', '__init__': <function __init__ at 0x10c5757d0>, 'raise_amount': 1.04, 'fullname': <function fullname at 0x10c575ed8>, '__doc__': None, 'apply_raise': <function apply_raise at 0x10c579d70>}  which has access to the class attribute raise_amount
+# print(Employee.__dict__)
+
+#  instance accesses the classes attribute
 print(emp_1.raise_amount)
 print(emp_2.raise_amount)
 
