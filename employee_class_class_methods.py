@@ -36,9 +36,19 @@ print(Employee.num_of_emps)
 emp_1 = Employee("Corey", "Schafer", 75000)
 emp_2 = Employee("test", "user", 85000)
 
-Employee.set_raise_amt(1.05)
 
-print(Employee.raise_amount)
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
+emp_str_1 = "John-Doe-70000"
+emp_str_2 = "Steve-Smity-30000"
+emp_str_3 = "Jane-Doe-90000"
+
+first, last, pay = emp_str_1.split("-")
+new_emp1 = Employee(first, last, pay)
+
+print(new_emp1.email)
+print(new_emp1.pay)
+
+
+# print(Employee.raise_amount)
+# print(emp_1.raise_amount)
+# print(emp_2.raise_amount)
 
