@@ -28,6 +28,12 @@ class Employee:
     def set_raise_amt(cls, amount):
         cls.raise_amount = amount
 
+    #  new class method as an alternative constructor to parse the string
+    @classmethod
+    def from_string(cls, emp_str):
+        first, last, pay = emp_str.split("-")
+        return cls(first, last, pay)
+
 
 print(Employee.num_of_emps)
 
@@ -41,11 +47,10 @@ emp_str_1 = "John-Doe-70000"
 emp_str_2 = "Steve-Smity-30000"
 emp_str_3 = "Jane-Doe-90000"
 
-first, last, pay = emp_str_1.split("-")
-new_emp1 = Employee(first, last, pay)
+new_emp_1 = Employee.from_string(emp_str_1)
 
-print(new_emp1.email)
-print(new_emp1.pay)
+print(new_emp_1.email)
+print(new_emp_1.pay)
 
 
 # print(Employee.raise_amount)
