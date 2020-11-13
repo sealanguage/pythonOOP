@@ -34,23 +34,24 @@ class Employee:
         first, last, pay = emp_str.split("-")
         return cls(first, last, pay)
 
-    #  static methods don't pass anything automatically - means they behave like regular functions. include them in classes because they have some logical connection with the class
-    @staticmethod
-    def is_workday(day):
-        if day.weekday() == 5 or day.weekday() == 6:
-            return False
-        return True
+
+#  new class, inherits variables/methods from Employee class
+class Developer(Employee):
+    pass
 
 
-print(Employee.num_of_emps)
+dev_1 = Employee("Corey", "Schafer", 75000)
+dev_2 = Employee("test", "user", 85000)
 
-#  creating instances of the employee class
-#  self passed in automatically
-emp_1 = Employee("Corey", "Schafer", 75000)
-emp_2 = Employee("test", "user", 85000)
+#  customizing the sub class
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
 
-import datetime
+# print(dev_1.email)
+# print(dev_2.email)
 
-my_date = datetime.date(2020, 11, 10)
+# print(
+#     help(Developer)
+# )  # resolution order walks up the chain of inheritance. the help will show all the inhertied properties/methods of Employee
 
-print(Employee.is_workday(my_date))

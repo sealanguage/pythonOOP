@@ -1,4 +1,4 @@
-#  OOP python wit manually set variables
+#  OOP python with manually set variables
 
 
 class Employee:
