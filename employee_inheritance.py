@@ -37,19 +37,23 @@ class Employee:
 
 #  new class, inherits variables/methods from Employee class
 class Developer(Employee):
-    pass
+    raise_amount = 1.10
+
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(self, first, last, pay)
+        self.prog_lang - prog_lang
 
 
-dev_1 = Employee("Corey", "Schafer", 75000)
-dev_2 = Employee("test", "user", 85000)
+dev_1 = Developer("Corey", "Schafer", 75000, "Python")
+dev_2 = Developer("test", "user", 85000, "Java")
 
 #  customizing the sub class
 print(dev_1.pay)
 dev_1.apply_raise()
 print(dev_1.pay)
 
-# print(dev_1.email)
-# print(dev_2.email)
+print(dev_1.email)
+print(dev_1.prog_lang)
 
 # print(
 #     help(Developer)
