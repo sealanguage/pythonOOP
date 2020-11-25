@@ -53,8 +53,8 @@ print(dev_1.pay)
 dev_1.apply_raise()
 print(dev_1.pay)
 
-print(dev_1.email)
-print(dev_1.prog_lang)
+# print(dev_1.email)
+# print(dev_1.prog_lang)
 
 # print(
 #     help(Developer)
