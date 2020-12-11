@@ -41,22 +41,21 @@ class Developer(Employee):
     raise_amount = 1.10
 
     def __init__(self, first, last, pay, prog_lang):
-        super(Employee, self).__init__(self, first, last, pay, prog_lang)
+        # super(Developer, self).__init__(self, first, last, pay, prog_lang)
+        Employee.__init__(self, first, last, pay)
         self.prog_lang = prog_lang
 
 
 dev_1 = Developer("Corey", "Schafer", 75000, "Python")
-dev_2 = Developer("test", "user", 85000, "Java")
+# dev_2 = Developer("test", "user", 85000, "Java")
 
 #  customizing the sub class
-print(dev_1.pay)
-dev_1.apply_raise()
-print(dev_1.pay)
+# print(dev_1.pay)
+# dev_1.apply_raise()
+# print(dev_1.pay)
 
-# print(dev_1.email)
-# print(dev_1.prog_lang)
+print(dev_1.email)
+print(dev_1.prog_lang)
 
-# print(
-#     help(Developer)
-# )  # resolution order walks up the chain of inheritance. the help will show all the inhertied properties/methods of Employee
+# resolution order walks up the chain of inheritance. the help will show all the inhertied properties/methods of Employee
 
