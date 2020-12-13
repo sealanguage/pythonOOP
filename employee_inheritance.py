@@ -48,7 +48,6 @@ class Developer(Employee):
 
 class Manager(Employee):
     def __init__(self, first, last, pay, employees=None):
-        # super(Developer, self).__init__(self, first, last, pay, prog_lang)
         Employee.__init__(self, first, last, pay)
         if employees is None:
             self.employees = []
@@ -71,7 +70,7 @@ class Manager(Employee):
 dev_1 = Developer("Corey", "Schafer", 75000, "Python")
 dev_2 = Developer("test", "user", 85000, "Java")
 
-mgr_1 = Manager("Sue", "Smoty", 90000, dev_1)
+mgr_1 = Manager("Sue", "Smoty", 90000, [dev_1])
 
 print(mgr_1.email)
 mgr_1.print_emps()
