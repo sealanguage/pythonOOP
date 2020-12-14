@@ -73,7 +73,12 @@ dev_2 = Developer("test", "user", 85000, "Java")
 mgr_1 = Manager("Sue", "Smoty", 90000, [dev_1])
 
 print(mgr_1.email)
+
+mgr_1.add_emp(dev_2)
+mgr_1.remove_emp(dev_1)
+
 mgr_1.print_emps()
+
 
 #  customizing the sub class
 # print(dev_1.pay)
