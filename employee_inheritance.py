@@ -79,6 +79,16 @@ mgr_1.remove_emp(dev_1)
 
 mgr_1.print_emps()
 
+# isinstance method returns true if mgr_1 is instance of Manager and Employee, false if asked if mgr_1 is instance of Developer
+print(isinstance(mgr_1, Manager))
+print(isinstance(mgr_1, Employee))
+print(isinstance(mgr_1, Developer))
+
+# issubclass method returns true if Manager is subclass of Employee or if Developer is subclass of Employee, and false if asked if Manager is subclass of Developer
+print(issubclass(Manager, Developer))
+print(issubclass(Developer, Employee))
+print(issubclass(Manager, Employee))
+
 
 #  customizing the sub class
 # print(dev_1.pay)
