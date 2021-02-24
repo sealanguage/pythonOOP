@@ -36,6 +36,10 @@ emp_2 = Employee("test", "user", 85000)
 print(Employee.num_of_emps)
 
 
+
+
+
+
 # print(Employee.raise_amount)
 
 #  prints {'pay': 75000, 'last': 'Schafer', 'email': 'Corey.Schafer@company.com', 'first': 'Corey'}  no raise_amount in the dict
